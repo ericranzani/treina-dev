@@ -13,12 +13,17 @@ while(opcao != 3) do
     if (opcao == 1)
         puts "Digite o nome da receita: "
         receita = gets.chomp()
-        receitas << receita
+        puts "Digite o ntipo da receita: "
+        tipo = gets.chomp()
+        receitas << {nome: receita, tipo: tipo}
+
         puts "Receita #{receita} cadastrada com sucesso!"
         puts
     elsif (opcao == 2)
         puts "=========== Receitas cadastradas ==========="
-        puts receitas # no ruby quando voce pede para pintar uma mensagem de uma lista, o proprio ruby ja identifica q é cada elemento da lista
+        receitas.each do |receita|
+            puts "#{receita[:nome]} - #{receita[:tipo]}"
+        end    
     else
         puts "Opção invalida, digite um valor valido"
     end
