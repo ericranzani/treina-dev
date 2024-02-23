@@ -1,11 +1,9 @@
-class Professor
-    attr_reader :ferias
-    attr_accessor :nome, :codigoF, :disciplina
-    def initialize(nome, codigoF, disciplina)
-        @nome = nome
-        @codigoF = codigoF
+class Professor< Funcionario
+    attr_accessor :disciplina
+
+    def initialize(nome, codigo_funcionario, disciplina)
+        super(nome, codigo_funcionario)
         @disciplina = disciplina
-        @ferias = false
     end
 
     def inicia_ferias()
