@@ -10,5 +10,11 @@ class Aluno
 
     def inicia_ferias()
         @ferias = true
+        @data_inicio_ferias = Time.now()
+    end
+
+    def encerra_ferias()
+        @ferias = false
+        @data_encerra_ferias = Time.now()
     end
 end
