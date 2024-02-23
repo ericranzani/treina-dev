@@ -1,4 +1,4 @@
-class Aluno
+class Professor
     attr_reader :ferias
     attr_accessor :nome, :codigoF, :disciplina
     def initialize(nome, codigoF, disciplina)

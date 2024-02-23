@@ -1,8 +1,10 @@
-class Aluno
-    attr_accessor :nome, :numero_sala, :prof_responsavel
-    def initialize(nome, numero_sala, prof_responsavel)
-        @nome = nome
-        @numero_sala = numero_sala
-        @prof_responsavel = prof_responsavel
+class Turma
+    attr_accessor :alunos, :nome
+    def initialize
+        @alunos = []
+    end
+
+    def adiciona_aluno(aluno)
+        alunos << aluno
     end
 end
